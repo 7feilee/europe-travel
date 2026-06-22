@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://7feilee.github.io/europe-travel/sitemap.xml

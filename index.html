@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>与君王同游 · 硬核欧洲旅游攻略</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="一部中文硬核欧洲旅游攻略 wiki:拒绝社媒打卡式旅游,用旅游书+官网+历史知识做功课;每个目的地配一位最有个性的君王作向导,带着防骗防坑和提前订票清单,玩回你花的每一分钱。涵盖意大利各大区、法国、西班牙、奥地利、德国、比利时。" />
+  <meta name="keywords" content="欧洲旅游,意大利旅游,攻略,自由行,防骗,防坑,提前订票,文艺复兴,君王史,美第奇,威尼斯,罗马,佛罗伦萨,那不勒斯,西西里,维也纳,马德里,卢浮宫,自驾,做功课" />
+  <meta name="author" content="7feilee" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="theme-color" content="#2a1410" />
+  <link rel="canonical" href="https://7feilee.github.io/europe-travel/" />
+  <!-- Open Graph / 社交分享 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="与君王同游 · 硬核欧洲旅游攻略" />
+  <meta property="og:title" content="与君王同游 · 硬核欧洲旅游攻略" />
+  <meta property="og:description" content="拒绝社媒打卡,带着历史和防坑知识玩欧洲。每个目的地配一位最有个性的君王当向导——入其室如见故人。" />
+  <meta property="og:url" content="https://7feilee.github.io/europe-travel/" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="与君王同游 · 硬核欧洲旅游攻略" />
+  <meta name="twitter:description" content="硬核、反社媒、君王史驱动的中文欧洲旅游攻略。玩回你花的每一分钱。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <style>
+    :root {
+      --theme-color: #9b2226;
+      --theme-color-2: #bb8a2e;
+      --reading-max: 50rem;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif; }
+    /* 正文排版:更舒适的中文阅读 */
+    .markdown-section { max-width: var(--reading-max); }
+    .markdown-section p,
+    .markdown-section li { line-height: 1.85; letter-spacing: .01em; font-size: 16.5px; color: #2d2622; }
+    .markdown-section h1 { font-weight: 800; letter-spacing: -.01em; color: #3a1d12; }
+    .markdown-section h2 {
+      margin-top: 2.2rem; padding-bottom: .35em;
+      border-bottom: 2px solid #efe2cf;
+    }
+    .markdown-section h2, .markdown-section h3 { font-weight: 700; color: #3a1d12; }
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color-2);
+      background: linear-gradient(90deg, #fbf4e6 0%, #fbf8f2 100%);
+      border-radius: 0 8px 8px 0; color: #4a3526;
+    }
+    .markdown-section strong { color: #7a1419; }
+    .markdown-section table { display: table; width: 100%; }
+    .markdown-section tr:nth-child(2n) { background: #fbf5ea; }
+    .markdown-section th { background: #f4e7d0; }
+    .markdown-section code { color: #9b2226; background: #f7ecd9; }
+    .markdown-section pre { background: #241a12; }
+    .markdown-section a { color: var(--theme-color); border-bottom: 1px dashed rgba(155,34,38,.4); text-decoration: none; }
+    .markdown-section a:hover { border-bottom-style: solid; }
+    /* 侧边栏 */
+    .sidebar { background: #fcf9f3; }
+    .sidebar > h1 { margin: 1.4rem 0 .6rem; }
+    .sidebar > h1 .app-name-link { font-weight: 800; }
+    .sidebar ul li a { color: #4f463c; font-size: 14.5px; }
+    .sidebar ul li.active > a { color: var(--theme-color); font-weight: 700; border-right: 3px solid var(--theme-color); }
+    .sidebar-nav > ul > li > strong,
+    .sidebar-nav strong { color: #b09a72; font-size: 12px; letter-spacing: .08em; }
+    /* 封面 */
+    section.cover { background: radial-gradient(1200px 600px at 72% 8%, #5a2417 0%, #2a1410 62%) !important; }
+    section.cover .cover-main > p > a { border-radius: 999px; }
+    section.cover .cover-main > p > a.button { background: var(--theme-color); border-color: var(--theme-color); }
+    section.cover h1 small { font-weight: 400; }
+    section.cover blockquote p { font-size: 1.4rem; color: #f0d9a8; }
+    /* 搜索框 */
+    .search input { border-radius: 8px; }
+    /* 顶部进度条 */
+    .progress { background-image: linear-gradient(90deg, var(--theme-color), var(--theme-color-2)); }
+    @media (min-width: 769px) {
+      .content { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">正在加载…</div>
+  <script>
+    window.$docsify = {
+      name: '🏛️ 与君王同游',
+      nameLink: '#/',
+      repo: 'https://github.com/7feilee/europe-travel',
+      loadSidebar: true,
+      loadNavbar: false,
+      coverpage: true,
+      onlyCover: false,
+      homepage: 'README.md',
+      maxLevel: 3,
+      subMaxLevel: 3,
+      auto2top: true,
+      relativePath: true,
+      notFoundPage: true,
+      search: {
+        placeholder: '🔍 全文搜索(城市 / 君王 / 防坑 / 订票)',
+        noData: '没有找到结果,换个关键词试试',
+        depth: 6,
+        paths: 'auto'
+      },
+      pagination: {
+        previousText: '上一章',
+        nextText: '下一章',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      count: {
+        countable: true,
+        fontsize: '0.85em',
+        color: '#b09a72',
+        language: 'chinese'
+      },
+      formatUpdated: '{YYYY}-{MM}-{DD}',
+      plugins: [
+        function pageFooter(hook, vm) {
+          hook.afterEach(function (html, next) {
+            var file = (vm.route && vm.route.file) || 'README.md';
+            var edit = 'https://github.com/7feilee/europe-travel/blob/main/' + encodeURI(file);
+            var footer =
+              '<hr style="margin-top:3rem;border:none;border-top:1px solid #efe2cf"/>' +
+              '<footer style="color:#b09a72;font-size:13.5px;line-height:1.9;padding-bottom:1rem">' +
+              '<p style="margin:.2rem 0">📝 <a href="' + edit + '" target="_blank" rel="noopener">在 GitHub 上编辑/纠错本页</a>' +
+              ' · <a href="#/书单与官网清单">书单与官网</a>' +
+              ' · <a href="#/术语表">术语表</a>' +
+              ' · <a href="#/">返回首页</a></p>' +
+              '<p style="margin:.2rem 0;color:#c4b291">《与君王同游 · 硬核欧洲旅游攻略》· 内容仅供出行参考 · 价格/开放时间以各景点官网为准。</p>' +
+              '</footer>';
+            next(html + footer);
+          });
+        }
+      ]
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@3/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+</body>
+</html>

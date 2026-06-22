@@ -61,7 +61,14 @@
     .sidebar-nav > ul > li > strong,
     .sidebar-nav strong { color: #b09a72; font-size: 12px; letter-spacing: .08em; }
     /* 封面 */
-    section.cover { background: radial-gradient(1200px 600px at 72% 8%, #5a2417 0%, #2a1410 62%) !important; }
+    section.cover {
+      background:
+        linear-gradient(180deg, rgba(30,13,10,.55) 0%, rgba(42,20,16,.82) 58%, rgba(42,20,16,.96) 100%),
+        radial-gradient(1200px 600px at 72% 8%, rgba(90,36,23,.45) 0%, rgba(42,20,16,0) 60%),
+        url(images/cover.jpg) center 38% / cover no-repeat,
+        #2a1410 !important;
+    }
+    section.cover .cover-main { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
     section.cover .cover-main > p > a { border-radius: 999px; }
     section.cover .cover-main > p > a.button { background: var(--theme-color); border-color: var(--theme-color); }
     section.cover h1 small { font-weight: 400; }
@@ -70,6 +77,12 @@
     .search input { border-radius: 8px; }
     /* 顶部进度条 */
     .progress { background-image: linear-gradient(90deg, var(--theme-color), var(--theme-color-2)); }
+    /* 章节首图(由 heroImage 插件注入,缺图自动隐藏) */
+    .markdown-section .hero-img {
+      display: block; width: 100%; max-height: 360px; object-fit: cover;
+      border-radius: 10px; margin: .2rem 0 1.8rem;
+      border: 1px solid #efe2cf; box-shadow: 0 8px 28px rgba(58,29,18,.16);
+    }
     @media (min-width: 769px) {
       .content { padding-top: 0; }
     }
@@ -112,6 +125,18 @@
       },
       formatUpdated: '{YYYY}-{MM}-{DD}',
       plugins: [
+        function heroImage(hook, vm) {
+          hook.afterEach(function (html, next) {
+            var file = (vm.route && vm.route.file) || '';
+            var name = file.replace(/\.md$/, '');
+            var hero = '';
+            if (name && name !== 'README' && name.charAt(0) !== '_' && name !== '图片来源') {
+              var src = 'images/' + encodeURIComponent(name) + '.jpg';
+              hero = '<img src="' + src + '" class="hero-img" alt="" loading="lazy" onerror="this.remove()"/>';
+            }
+            next(hero + html);
+          });
+        },
         function pageFooter(hook, vm) {
           hook.afterEach(function (html, next) {
             var file = (vm.route && vm.route.file) || 'README.md';
@@ -122,6 +147,7 @@
               '<p style="margin:.2rem 0">📝 <a href="' + edit + '" target="_blank" rel="noopener">在 GitHub 上编辑/纠错本页</a>' +
               ' · <a href="#/书单与官网清单">书单与官网</a>' +
               ' · <a href="#/术语表">术语表</a>' +
+              ' · <a href="#/图片来源">图片来源</a>' +
               ' · <a href="#/">返回首页</a></p>' +
               '<p style="margin:.2rem 0;color:#c4b291">《与君王同游 · 硬核欧洲旅游攻略》· 内容仅供出行参考 · 价格/开放时间以各景点官网为准。</p>' +
               '</footer>';

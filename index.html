@@ -62,17 +62,25 @@
     .sidebar-nav strong { color: #b09a72; font-size: 12px; letter-spacing: .08em; }
     /* 封面 */
     section.cover {
+      position: relative;
       background:
-        linear-gradient(180deg, rgba(30,13,10,.55) 0%, rgba(42,20,16,.82) 58%, rgba(42,20,16,.96) 100%),
-        radial-gradient(1200px 600px at 72% 8%, rgba(90,36,23,.45) 0%, rgba(42,20,16,0) 60%),
+        linear-gradient(180deg, rgba(30,13,10,.48) 0%, rgba(42,20,16,.78) 56%, rgba(28,12,9,.97) 100%),
+        radial-gradient(1100px 540px at 74% 12%, rgba(187,138,46,.20) 0%, rgba(42,20,16,0) 62%),
         url(images/cover.jpg) center 38% / cover no-repeat,
         #2a1410 !important;
+      box-shadow: inset 0 0 240px 70px rgba(0,0,0,.5);
     }
-    section.cover .cover-main { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
-    section.cover .cover-main > p > a { border-radius: 999px; }
-    section.cover .cover-main > p > a.button { background: var(--theme-color); border-color: var(--theme-color); }
-    section.cover h1 small { font-weight: 400; }
-    section.cover blockquote p { font-size: 1.4rem; color: #f0d9a8; }
+    section.cover::after {
+      content: ""; position: absolute; inset: 20px; pointer-events: none;
+      border: 1px solid rgba(187,138,46,.34); border-radius: 4px;
+    }
+    section.cover .cover-main { position: relative; z-index: 1; text-shadow: 0 2px 20px rgba(0,0,0,.5); }
+    section.cover h1 { font-weight: 800; letter-spacing: .01em; }
+    section.cover h1 small { display: block; margin-top: .55rem; font-weight: 400; color: #f0d9a8; font-size: 1.05rem; letter-spacing: .2em; }
+    section.cover blockquote p { font-size: 1.4rem; font-style: italic; color: #f3deb0; }
+    section.cover .cover-main > p > a { border-radius: 999px; transition: transform .15s ease, box-shadow .15s ease; }
+    section.cover .cover-main > p > a.button { background: var(--theme-color); border-color: var(--theme-color); box-shadow: 0 6px 22px rgba(0,0,0,.34); }
+    section.cover .cover-main > p > a:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.42); }
     /* 搜索框 */
     .search input { border-radius: 8px; }
     /* 顶部进度条 */
